@@ -28,7 +28,7 @@
         </div>
 
         <div class="field" ng-show="autoFilledSchool">
-          <label> School </label>
+          <label> What college or university do you attend? </label>
           <input class="ui input"
                  disabled="disabled"
                  ng-show="autoFilledSchool"
@@ -36,7 +36,7 @@
         </div>
 
         <div class="field" ng-show="!autoFilledSchool">
-          <label> School </label>
+          <label> What college or university do you attend? </label>
           <div id="school" class="ui search">
             <div class="ui input">
               <input class="prompt" type="text" placeholder="School" name="school" ng-model="user.profile.school">                
@@ -46,16 +46,39 @@
         </div>
 
         <div class="field">
+          <label>What’s your major?</label>
+          <input class="ui input" name="major" ng-model="user.profile.major">
+        </div>
+
+        <div class="field">
           <label>Graduation Year</label>
           <select
             name="year"
             ng-model="user.profile.graduationYear">
             <option value="">Graduation Year</option>
-            <option value="2016">2016</option>
-            <option value="2017">2017</option>
             <option value="2018">2018</option>
             <option value="2019">2019</option>
+            <option value="2020">2020</option>
+            <option value="2021">2021</option>
+            <option value="2022">2022</option>
+            <option value="2023">2023</option>
           </select>
+        </div>
+
+        <div class="grouped fields">
+          <label for="firstgen">Are you a first generation college student? (Optional)</label>
+          <div class="field">
+            <div class="ui radio checkbox">
+              <input class="ui input" type="radio" ng-model="user.profile.firstGen" name="firstGen" value="no">
+              <label for="firstGenNo">No</label>
+            </div>
+          </div>
+          <div class="field">
+            <div class="ui radio checkbox">
+              <input class="ui input" type="radio" ng-model="user.profile.firstGen" name="firstGen" value="yes">
+              <label for="firstGenYes">Yes</label>
+            </div>
+          </div>
         </div>
 
         <div class="field">
@@ -68,39 +91,103 @@
             <option value="F">Female</option>
             <option value="O">Other</option>
             <option value="N">I prefer not to answer.</option>
+            <option value="O">Other</option>
+          </select>
+          <br/>
+          <label ng-show="user.profile.gender == 'O'">Please specify other</label>
+          <input ng-model="user.profile.genderOther" ng-show="user.profile.gender == 'O'" name="gender-other" />
+        </div>
+
+        <div class="field">
+          <label> Shirt Size </label>
+          <select name="shirt" ng-model="user.profile.shirtSize" required>
+            <option value="">Shirt Size</option>
+            <option value="XS">Unisex X-Small</option>
+            <option value="S">Unisex Small</option>
+            <option value="M">Unisex Medium</option>
+            <option value="L">Unisex Large</option>
+            <option value="XL">Unisex X-Large</option>
+            <option value="XXL">Unisex XX-Large</option>
           </select>
         </div>
 
         <div class="field">
-          <label>I would describe myself as a...</label>
-          <input type="text"
-                 placeholder="Designer, Data Scientist, iOS Wizard, Hacker Extraordinaire"
-                 ng-model="user.profile.description">
+          <label>How many hackathons have you attended?</label>
+          <input type="number" ng-model="user.profile.numHackathons" name="numberHackathons" />
+        </div>
+
+        <div class="ui field">
+          <label>What would you like to learn about at Hacklahoma?</label>
+          <select multiple="" class="ui fluid dropdown" name="learn" ng-model="user.profile.learn">
+            <option value="web-dev">Web Development</option>
+            <option value="alexa">Alexa</option>
+            <option value="vr">Virtual Reality</option>
+            <option value="mobile-dev">Mobile Development</option>
+            <option value="3d">3D Printing</option>
+          </select>
+        </div>
+        
+        <div class="ui divider"></div>
+
+        <div class="ui message">
+          Fill in the fields below if you would like the companies that will be attending Hacklahoma to have access to your resume
+          or any of your professional profiles.
         </div>
 
         <div class="field">
-          <label>
-              What would you like to learn or get out of HackMIT? (optional)
-          </label>
-          <textarea ng-model="user.profile.essay">
-          </textarea>
+          <label>Github</label>
+          <input type="text" autocomplete="off" ng-model="user.profile.github">
         </div>
+        <div class="field">
+          <label>LinkedIn</label>
+          <input type="text" autocomplete="off" ng-model="user.profile.linkedin">
+        </div>
+        <div class="field">
+          <label>Personal Website</label>
+          <input type="text" autocomplete="off" ng-model="user.profile.website">
+        </div>
+
+        <div class="ui checkbox">
+          <input type="checkbox" id="socialMediaRelease" ng-model="user.profile.socialMediaAgree">
+          <label for="social_agree">If I provided my resume and or professional profiles above, I agree to share my resume, linkedin profile, github,
+            and or personal website with Hacklahoma and its sponsors.</label>
+        </div>
+
+        <div class="ui divider"></div>
+
+        <div class="field">
+          <label>Why do you want to attend Hacklahoma? What are your personal goals for the event?</label>
+          <textarea ng-model="user.profile.essay"></textarea>
+        </div>
+
+        <div class="field">
+          <label>If you could have any superpower what would it be and why?</label>
+          <textarea maxlength="140" ng-model="user.profile.superpower"></textarea>
+        </div>
+
+        <div class="ui divider"></div>
 
         <div class="field"
              ng-hide="isMitStudent">
           <p>
-            Because of limitations imposed by MIT, we are not legally allowed to host
-            non-MIT minors (those under 18) for HackMIT 2015. Checking the box below affirms that you are or will be 18 years or older by September 19th, 2015.
+            Because of limitations imposed by OU, we are not legally allowed to host
+            non-OU minors (those under 18) for Hacklahoma. Checking the box below affirms that you are or will be 18 years or older by March 3rd, 2018.
           </p>
           <p>
             <strong>
-            We will be checking ID. If you are a non-MIT minor, you will be turned away at the door.
+            We will be checking ID. If you are a non-OU minor, you will be turned away at the door.
             </strong>
           </p>
           <div class="ui checkbox">
             <input type="checkbox" id="adult" ng-model="user.profile.adult">
             <label for="adult">I am 18 or older.</label>
           </div>
+        </div>
+
+        <div class="field">
+          <label>Is there anything else? Do you have anything else to share with us about yourself? Do you have any questions? Also, feel
+            free to give us more activity suggestions, and let us know about other things that you want to see at Hacklahoma.</label>
+          <textarea maxlength="150" ng-model="user.profile.notes"></textarea>
         </div>
 
         <br>

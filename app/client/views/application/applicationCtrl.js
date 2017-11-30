@@ -9,15 +9,15 @@ angular.module('reg')
     'Session',
     'UserService',
     function($scope, $rootScope, $state, $http, currentUser, Settings, Session, UserService){
-
+      $(".ui.dropdown").dropdown();
       // Set up the user
       $scope.user = currentUser.data;
 
-      // Is the student from MIT?
-      $scope.isMitStudent = $scope.user.email.split('@')[1] == 'mit.edu';
+      // Is the student from ou?
+      $scope.isOUStudent = $scope.user.email.split('@')[1] == 'ou.edu';
 
       // If so, default them to adult: true
-      if ($scope.isMitStudent){
+      if ($scope.isOUStudent){
         $scope.user.profile.adult = true;
       }
 
