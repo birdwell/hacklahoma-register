@@ -93,7 +93,9 @@
             <option value="N">I prefer not to answer.</option>
             <option value="O">Other</option>
           </select>
-          <br/>
+        </div>
+
+        <div class="field">
           <label ng-show="user.profile.gender == 'O'">Please specify other</label>
           <input ng-model="user.profile.genderOther" ng-show="user.profile.gender == 'O'" name="gender-other" />
         </div>
@@ -136,15 +138,15 @@
 
         <div class="field">
           <label>Github</label>
-          <input type="text" autocomplete="off" ng-model="user.profile.github">
+          <input type="text" autocomplete="off" ng-model="user.profile.github" placeholder="https://www.github.com/">
         </div>
         <div class="field">
           <label>LinkedIn</label>
-          <input type="text" autocomplete="off" ng-model="user.profile.linkedin">
+          <input type="text" autocomplete="off" ng-model="user.profile.linkedin" placeholder="https://www.linkedin.com/in/">
         </div>
         <div class="field">
           <label>Personal Website</label>
-          <input type="text" autocomplete="off" ng-model="user.profile.website">
+          <input type="text" autocomplete="off" ng-model="user.profile.website" placeholder="https://www.mywebsite.com/">
         </div>
 
         <div class="ui checkbox">
@@ -161,24 +163,25 @@
         </div>
 
         <div class="field">
-          <label>If you could have any superpower what would it be and why?</label>
+          <label>If you could have any superpower what would it be and why? (140 Limit)</label>
           <textarea maxlength="140" ng-model="user.profile.superpower"></textarea>
         </div>
 
         <div class="ui divider"></div>
 
-        <div class="field"
-             ng-hide="isMitStudent">
-          <p>
-            Because of limitations imposed by OU, we are not legally allowed to host
-            non-OU minors (those under 18) for Hacklahoma. Checking the box below affirms that you are or will be 18 years or older by March 3rd, 2018.
-          </p>
-          <p>
-            <strong>
-            We will be checking ID. If you are a non-OU minor, you will be turned away at the door.
-            </strong>
-          </p>
-          <div class="ui checkbox">
+        <div ng-hide="isOUStudent">
+          <div class="ui message">
+            <p>
+              Because of limitations imposed by OU, we are not legally allowed to host
+              non-OU minors (those under 18) for Hacklahoma. Checking the box below affirms that you are or will be 18 years or older by March 3rd, 2018.
+            </p>
+            <p>
+              <strong>
+              We will be checking ID. If you are a non-OU minor, you will be turned away at the door.
+              </strong>
+            </p>
+          </div>
+          <div class="ui field checkbox">
             <input type="checkbox" id="adult" ng-model="user.profile.adult">
             <label for="adult">I am 18 or older.</label>
           </div>
@@ -194,12 +197,12 @@
 
         <div class="field" ng-hide="regIsClosed">
           <button type="submit"
-                  class="fluid ui purple button"
+                  class="fluid ui green button"
                   ng-click="submitForm()">
             Submit
           </button>
         </div>
-
+        <div class="ui error message"></div>
         </fieldset>
       </div>
     </div>

@@ -112,47 +112,56 @@ angular.module('reg')
           inline: true,
           fields: {
             name: {
-              identifier: 'name',
+              identifier: "name",
               rules: [
                 {
-                  type: 'empty',
-                  prompt: 'Please enter your name.'
+                  type: "empty",
+                  prompt: "Please enter your name."
                 }
               ]
             },
             school: {
-              identifier: 'school',
+              identifier: "school",
               rules: [
                 {
-                  type: 'empty',
-                  prompt: 'Please enter your school name.'
+                  type: "empty",
+                  prompt: "Please enter your school name."
+                }
+              ]
+            },
+            major: {
+              identifier: "major",
+              rules: [
+                {
+                  type: "empty",
+                  prompt: "Please enter your major."
                 }
               ]
             },
             year: {
-              identifier: 'year',
+              identifier: "year",
               rules: [
                 {
-                  type: 'empty',
-                  prompt: 'Please select your graduation year.'
+                  type: "empty",
+                  prompt: "Please select your graduation year."
                 }
               ]
             },
             gender: {
-              identifier: 'gender',
+              identifier: "gender",
               rules: [
                 {
-                  type: 'empty',
-                  prompt: 'Please select a gender.'
+                  type: "empty",
+                  prompt: "Please select a gender."
                 }
               ]
             },
             adult: {
-              identifier: 'adult',
+              identifier: "adult",
               rules: [
                 {
-                  type: 'allowMinors',
-                  prompt: 'You must be an adult, or an MIT student.'
+                  type: "allowMinors",
+                  prompt: "You must be an adult, or an MIT student."
                 }
               ]
             }

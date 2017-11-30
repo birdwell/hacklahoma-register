@@ -5,38 +5,44 @@ var mongoose   = require('mongoose'),
     JWT_SECRET = process.env.JWT_SECRET;
 
 var profile = {
-
   // Basic info
   name: {
     type: String,
     min: 1,
-    max: 100,
+    max: 100
   },
 
   adult: {
     type: Boolean,
     required: true,
-    default: false,
+    default: false
   },
 
   school: {
     type: String,
     min: 1,
-    max: 150,
+    max: 150
   },
+
+  major: String,
 
   graduationYear: {
     type: String,
     enum: {
-      values: '2016 2017 2018 2019'.split(' '),
+      values: "2018 2019 2020 2021 2022 2023".split(" ")
     }
   },
 
-  description: {
-    type: String,
-    min: 0,
-    max: 300
-  },
+  firstGen: String,
+
+  numHackathons: Number,
+
+  /* Links */
+  github: String,
+  linkedin: String,
+  website: String,
+  resume: String,
+  socialMediaAgree: Boolean,
 
   essay: {
     type: String,
@@ -44,13 +50,22 @@ var profile = {
     max: 1500
   },
 
+  notes: String,
+
+  superpower: {
+    type: String,
+    min: 0,
+    max: 150
+  },
+
   // Optional info for demographics
   gender: {
     type: String,
-    enum : {
-      values: 'M F O N'.split(' ')
+    enum: {
+      values: "M F O N".split(" ")
     }
   },
+  genderOther: String
 
 };
 
