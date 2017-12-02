@@ -185,6 +185,7 @@ angular.module('reg')
             }
           }
         });
+        $('.dropdown.learn').dropdown('set selected', $scope.user.profile.learn);
       }
 
 
