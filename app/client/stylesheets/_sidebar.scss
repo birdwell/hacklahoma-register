@@ -104,7 +104,10 @@
       visibility: 'visible';
       opacity: 1;
       @include transform(translate3d(0,0,0));
-      padding: 12px;
+      padding: 0px;
+      img.small-logo-sidebar {
+        width: 100%;
+      }
     }
     .note {
       display: none;
