@@ -121,11 +121,15 @@
         <div class="ui field">
           <label>What would you like to learn about at Hacklahoma?</label>
           <select multiple="" class="ui fluid dropdown" name="learn" ng-model="user.profile.learn">
-            <option value="web-dev">Web Development</option>
-            <option value="alexa">Alexa</option>
-            <option value="vr">Virtual Reality</option>
-            <option value="mobile-dev">Mobile Development</option>
             <option value="3d">3D Printing</option>
+            <option value="alexa">Alexa</option>
+            <option value="ai">Artificial Intelligence</option>
+            <option value="hardware">Hardware Hacks</option>
+            <option value="machine-learning">Machine Learning</option>
+            <option value="mobile-dev">Mobile Development</option>
+            <option value="vr">Virtual Reality</option>
+            <option value="web-dev">Web Development</option>
+            <option value="unsure">Unsure</option>
           </select>
         </div>
         
@@ -138,15 +142,15 @@
 
         <div class="field">
           <label>Github</label>
-          <input type="text" autocomplete="off" ng-model="user.profile.github" placeholder="https://www.github.com/">
+          <input type="text" autocomplete="off" name="github" ng-model="user.profile.github" placeholder="https://www.github.com/">
         </div>
         <div class="field">
           <label>LinkedIn</label>
-          <input type="text" autocomplete="off" ng-model="user.profile.linkedin" placeholder="https://www.linkedin.com/in/">
+          <input type="text" autocomplete="off" name="linkedin" ng-model="user.profile.linkedin" placeholder="https://www.linkedin.com/in/">
         </div>
         <div class="field">
           <label>Personal Website</label>
-          <input type="text" autocomplete="off" ng-model="user.profile.website" placeholder="https://www.mywebsite.com/">
+          <input type="text" autocomplete="off" name="website" ng-model="user.profile.website" placeholder="https://www.mywebsite.com/">
         </div>
 
         <div class="field">

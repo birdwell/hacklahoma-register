@@ -164,6 +164,24 @@ angular.module('reg')
                   prompt: "You must be an adult, or an MIT student."
                 }
               ]
+            },
+            shirt: {
+              identifier: "shirt",
+              rules: [
+                {
+                  type: "empty",
+                  prompt: "Please select a shirt size."
+                }
+              ]
+            },
+            numberHackathons: {
+              identifier: "numberHackathons",
+              rules: [
+                {
+                  type: "empty",
+                  prompt: "Please enter how many hackathons you have attended."
+                }
+              ]
             }
           }
         });
