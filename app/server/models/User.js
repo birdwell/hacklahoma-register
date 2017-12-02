@@ -57,7 +57,8 @@ var profile = {
     min: 0,
     max: 150
   },
-
+  learn: [String],
+  shirtSize: String,
   // Optional info for demographics
   gender: {
     type: String,
@@ -73,12 +74,7 @@ var profile = {
 var confirmation = {
   phoneNumber: String,
   dietaryRestrictions: [String],
-  shirtSize: {
-    type: String,
-    enum: {
-      values: 'XS S M L XL XXL WXS WS WM WL WXL WXXL'.split(' ')
-    }
-  },
+
   wantsHardware: Boolean,
   hardware: String,
 
