@@ -46,12 +46,6 @@ function calculateStats(){
       'L': 0,
       'XL': 0,
       'XXL': 0,
-      'WXS': 0,
-      'WS': 0,
-      'WM': 0,
-      'WL': 0,
-      'WXL': 0,
-      'WXXL': 0,
       'None': 0
     },
 
@@ -152,7 +146,7 @@ function calculateStats(){
         // }
 
         // Count shirt sizes
-        if (user.confirmation.shirtSize in newStats.shirtSizes){
+        if (user.profile.shirtSize in newStats.shirtSizes){
           newStats.shirtSizes[user.confirmation.shirtSize] += 1;
         }
 
