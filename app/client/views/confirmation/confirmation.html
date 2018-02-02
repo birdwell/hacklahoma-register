@@ -31,7 +31,7 @@
               If your restriction is not included here, please let us know in the additional notes at the bottom.
             </p>
             <p>
-              We'll make sure you get fed :)
+              We'll make sure you get fed.
             </p>
 
           </div>
@@ -68,6 +68,32 @@
               We will have a hardware checkout, and we'll try our best to provide things that would be useful to you - however, we can't guarantee everything. We will publish a list of available hardware closer to the day of the event.
             </p>
             <input type="text" ng-model="user.confirmation.hardware">
+          </div>
+
+          <!-- TODO: Do you require special accommodations? 
+              Click a bubble for yes or no.  
+              When yes is clicked, an open field becomes available to enter response 
+          -->
+          <div class="field">
+              <label>
+                  Do you require special accommodations? 
+              </label>
+              <div class="ui checkbox">
+                <input type="checkbox" ng-model="user.confirmation.requireAccommodations">
+                <label> Yes, I will need special accommodations.</label>
+              </div>
+            </div>
+
+          <div
+            class="field"
+            ng-show="user.confirmation.requireAccommodations">
+            <label>
+              What special accomodations do you require?
+            </label>
+            <p>
+              We will do our best to meet this accomodations.
+            </p>
+            <input type="text" ng-model="user.confirmation.accommodations">
           </div>
 
           <br>
@@ -112,10 +138,14 @@
               </a>
             </p>
             <p>
-              For legal reasons, our university asks that you read and accept the terms of our liability waiver. Again, as we mentioned in the application - you <strong> must </strong> be 18 years or older or an OU undergraduate by the day of the event, or <strong> we will refuse you admission at the door. We will be checking ID. </strong>
+              For legal reasons, our university asks that you read and accept the terms of our liability waiver. 
+              Again, as we mentioned in the application - you <strong> must </strong> be 18 years or older or 
+              an OU undergraduate by the day of the event, or <strong> we will refuse you admission at the door. 
+              We will be checking ID. </strong>
             </p>
             <p>
-              By writing my name below, I affirm that I have read and accepted the terms of the liability waiver above, and will be either an OU undergraduate or 18 years or older at the time of the event.
+              By writing my name below, I affirm that I have read and accepted the terms of the liability waiver above, 
+              and will be either an OU undergraduate or 18 years or older at the time of the event.
             </p>
             <input type="text"
                    name="signatureLiabilityWaiver"
@@ -149,15 +179,22 @@
             <p>
               <a
                 target="_blank"
-                href="https://go.hackmit.org/code-of-conduct">
-                Hacker Code of Conduct
+                href="https://static.mlh.io/docs/mlh-code-of-conduct.pdf">
+                MLH Code of Conduct
+              </a>
+              <a
+                target="_blank"
+                href="https://www.ou.edu/studentconduct/policies.html">
+                University of Oklahoma policies
               </a>
             </p>
             <p>
-              It is extremely important to us that attendees follow a set of guidelines to make the event fun for everyone involved. Please read through and make sure you understand what we will be expecting of you.
+              It is extremely important to us that attendees follow a set of guidelines to make the event fun for everyone involved. 
+              Please read through and make sure you understand what we will be expecting of you.
             </p>
             <p>
-              By writing my name below, I affirm that I have read and will abide by the code of conduct detailed above.
+              If I attend Hacklahoma, I agree to adhere to the MLH code of conduct, 
+              and I agree to abide by University of Oklahoma policies.
             </p>
             <input type="text"
                    name="signatureCodeOfConduct"

@@ -75,14 +75,11 @@ var confirmation = {
   phoneNumber: String,
   dietaryRestrictions: [String],
 
+  requireAccommodations: Boolean,
+  accommodations: String,
+
   wantsHardware: Boolean,
   hardware: String,
-
-  major: String,
-  github: String,
-  twitter: String,
-  website: String,
-  resume: String,
 
   needsReimbursement: Boolean,
   address: {
@@ -94,14 +91,6 @@ var confirmation = {
     zip: String,
     country: String
   },
-  receipt: String,
-
-  hostNeededFri: Boolean,
-  hostNeededSat: Boolean,
-  genderNeutral: Boolean,
-  catFriendly: Boolean,
-  smokingFriendly: Boolean,
-  hostNotes: String,
 
   notes: String,
 
