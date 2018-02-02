@@ -1,11 +1,11 @@
 {
-  "name": "JAFRS",
+  "name": "hacklahoma",
   "version": "0.0.0",
   "homepage": "https://github.com/techx/hackmit-registration",
   "authors": [
-    "Edwin Zhang <ehzhang@mit.edu>"
+    "Josh Birdwell <birdwell@ou.edu>"
   ],
-  "description": "just another frickin reg system",
+  "description": "registration for hacklahoma",
   "license": "MIT",
   "ignore": [
     "**/.*",
