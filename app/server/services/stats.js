@@ -147,7 +147,7 @@ function calculateStats(){
 
         // Count shirt sizes
         if (user.profile.shirtSize in newStats.shirtSizes){
-          newStats.shirtSizes[user.confirmation.shirtSize] += 1;
+          newStats.shirtSizes[user.profile.shirtSize] += 1;
         }
 
         // Host needed counts
