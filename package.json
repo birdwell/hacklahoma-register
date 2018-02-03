@@ -1,7 +1,7 @@
 {
   "name": "hackmit-reg",
   "description": "mean stack registration system",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": "true",
   "dependencies": {
     "async": "^1.4.2",
