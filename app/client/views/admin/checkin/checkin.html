@@ -1,0 +1,17 @@
+<div class="ui segment">
+	<h3>Check-In</h3>
+	<p>Scan QR to check in User</p>
+	<div ng-show="user != false" class="ui success message">
+		<div class="header">
+			Check In Successful.
+		</div>
+		<p>{{ user.profile.name + ' has been checked in.'}}</p>
+	</div>
+	<div ng-show="error" class="ui error message">
+		<div class="header">
+			Check In Unsuccessful.
+		</div>
+		<p>{{ error }}</p>
+	</div>
+	<video id="preview" class="ui video"></video>
+</div>

@@ -1,5 +1,6 @@
 var app = angular.module('reg', [
   'ui.router',
+  'monospaced.qrcode',
 ]);
 
 app
