@@ -15,7 +15,7 @@ angular.module('reg')
 					$scope.error = null;
 				})
 				.error(function (error) {
-					$scope.error = error;
+					$scope.error = 'Could not find user. Please checkin manually.';
 				});
 			});
 			Instascan.Camera.getCameras().then(function (cameras) {
