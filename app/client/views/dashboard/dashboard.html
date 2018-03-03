@@ -37,7 +37,7 @@
         </div>
 
 
-        <div ng-f="dashState('confirmed')">
+        <div ng-if="dashState('confirmed')">
           <p><strong>Here is your ticket:</strong></p>
           <qrcode data="{{ user._id }}" size="150"></qrcode>
           <br/>

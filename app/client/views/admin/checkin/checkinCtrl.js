@@ -6,8 +6,7 @@ angular.module('reg')
 		'UserService',
 		function ($scope, $state, $stateParams, UserService) {
 			$scope.user = false;
-
-			let scanner = new Instascan.Scanner({ video: document.getElementById('preview') });
+			var scanner = new Instascan.Scanner({ video: document.getElementById('preview') });
 			scanner.addListener('scan', function (userId) {
 				UserService
 				.checkIn(userId)
@@ -18,10 +17,6 @@ angular.module('reg')
 				.error(function (error) {
 					$scope.error = error;
 				});
-
-				setTimeout(function () { 
-					$scope.user = false;
-				 }, 2000);
 			});
 			Instascan.Camera.getCameras().then(function (cameras) {
 				if (cameras.length > 0) {

@@ -26,7 +26,6 @@
     "moment": "~2.10.3",
     "showdown": "~1.2.1",
     "angular-qrcode": "^7.2.0",
-    "instascan": "*",
     "instascan.min": "https://github.com/schmich/instascan/releases/download/1.0.0/instascan.min.js"
   }
 }

@@ -31,7 +31,8 @@ gulp.task('js', function () {
         .pipe(ngAnnotate())
         .on('error', swallowError)
         .pipe(uglify())
-      .pipe(gulp.dest('app/client/build'));
+        .on('error', function (err) { console.error(err); })
+        .pipe(gulp.dest('app/client/build'));
   } else {
     gulp.src(['app/client/src/**/*.js', 'app/client/views/**/*.js'])
       .pipe(sourcemaps.init())
